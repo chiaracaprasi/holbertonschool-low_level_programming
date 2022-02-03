@@ -1,1 +1,4 @@
-# holbertonschool-low_level_programming
+This repository holbertonschool-low_level_programming will contain solution to task in C language.
+
+0x00. C - Hello, World
+
