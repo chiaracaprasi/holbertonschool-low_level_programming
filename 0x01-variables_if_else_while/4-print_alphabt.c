@@ -3,8 +3,7 @@
 #include <stdio.h>
 
 /**
- * main - prints alphabet in lower case
- * followed by new line
+ * main - prints alphabet in lower case expect q and e
  * Return: Always 0 (Success)
  */
 int main(void)
@@ -13,7 +12,7 @@ int main(void)
 
 	while (ch  <= 'z')
 	{
-		if (chr!= 'e' && ch != 'q')
+		if (ch != 'e' && ch != 'q')
 		{
 			putchar(ch);
 		}
