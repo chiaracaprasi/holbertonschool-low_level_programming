@@ -1,4 +1,3 @@
-
 #include <stdio.h>
 
 /**
@@ -14,12 +13,12 @@ int main(void)
 	{
 		for (n2 = 0; n2 <= 99; n2++)
 		{
-			if (n2 < n)
+			if (n < n2)
 			{
 				putchar((n / 10) + '0');
 				putchar((n % 10) + '0');
 				putchar(' ');
-				putchar((n2 / 10) + '0'); 
+				putchar((n2 / 10) + '0');
 				putchar((n2 % 10) + '0');
 				if (n != 98 || n2 != 99)
 				{
