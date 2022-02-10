@@ -6,7 +6,7 @@
  *@b: interger to be multiplied
 * Return: the result of the multiplication;
  */
-int int mul(int a, int b)
+int mul(int a, int b)
 {
 
 	int x;
