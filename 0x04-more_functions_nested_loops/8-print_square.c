@@ -1,11 +1,11 @@
 #include "main.h"
 /**
- * print_square- prints a diagonal line in the terminal
+ * print_square- prints a square in the terminal
  * using _ followed by new line
- * @n: the number of times the character _ should be printed
+ * @size: the number of times the character _ should be printed
  * Return: none
  */
-void print_diagonal(int size)
+void print_square(int size)
 {
 	if (size <= 0)
 	{
