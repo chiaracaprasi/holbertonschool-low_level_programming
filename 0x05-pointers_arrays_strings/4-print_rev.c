@@ -7,7 +7,7 @@
 
 void print_rev(char *s)
 {
-	char *begin_ptr, *end_ptr, tmp;
+	char *begin_ptr, *end_ptr;
 
 	begin_ptr = s;
 	end_ptr = s;
