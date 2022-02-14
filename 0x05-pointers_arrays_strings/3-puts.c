@@ -1,7 +1,8 @@
 #include "main.h"
+
 /**
- * _puts - print a string followed by new line
- * @str: pointer to string given as parameter
+ * _strlen - returns value of a string
+ * @s: pointer to string given as parameter
  * Return: Always 0.
  */
 int _strlen(char *s)
@@ -14,6 +15,12 @@ int _strlen(char *s)
 	return (n);
 
 }
+
+/**
+  * _puts - print a string followed by new line
+ * @str: pointer to string given as parameter
+ * Return: Always 0.
+ */
 
 void _puts(char *str)
 {
