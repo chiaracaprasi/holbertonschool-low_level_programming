@@ -43,14 +43,19 @@ void _puts(char *str)
 
 void puts_half(char *str)
 {
-	char *b, *e;
+	char *m;
+	int len = _strlen(str);
 
-	b = str;
-	e = &str[_strlen(str) - 1];
-
-	while (e != b)
+	if (len % 2 != 0)
 	{
+		m = &str[(len - 1) / 2];
 
-		_puts(str);
 	}
+
+	else
+	{
+		m = &str[len / 2];
+	}
+
+	_puts(m);
 }
