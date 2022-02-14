@@ -2,22 +2,6 @@
 #include <stdio.h>
 
 /**
- * _strlen - returns value of a string
- * @s: pointer to string given as parameter
- * Return: Always 0.
- */
-int _strlen(char *s)
-{
-	int n;
-
-	for (n = 0; *s != '\0'; s++)
-		n++;
-
-	return (n);
-
-}
-
-/**
   * print_array - print a string followed by new line
  * @a: pointer to array given as parameter
  * @n: number of elements of the array to be printed
@@ -27,12 +11,15 @@ int _strlen(char *s)
 void print_array(int *a, int n)
 {
 	int i;
-//	int len = _strlen(str);
 
-	for (i = 0; i <= n; i++)
+	for (i = 0; i < n; i++)
 	{
-		printf("%i, ", a[i]);
+		if (i == 0)
+			printf("%d", a[i]);
+		else
+		printf(", %d", a[i]);
 	}
-	_putchar('\n');
+	printf("\n");
+
 
 }
