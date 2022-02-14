@@ -43,8 +43,8 @@ void rev_string(char *s)
 {
 	char *b, *e;
 
-       	b = s;
-	e = &s[_strlen(s) -1];
+	b = s;
+	e = &s[_strlen(s) - 1];
 
 	while (b < e)
 	{
