@@ -2,8 +2,8 @@
 
 /**
  * _strcat - concatenates two strings
- * @dest: parameter char given
- * @src: parameter char given
+ * @dest: string to copy to
+ * @src: string to be copied
  *
  * Return: Always 0.
  */
@@ -12,10 +12,16 @@ char *_strcat(char *dest, char *src)
 	int i = 1;
 	int j = 0;
 
-	while
-		(dest[++i]);
-	while
-		(dest[i++] = src[j++]);
+	while (dest[i] != '\0')
+	{
+		i++;
+	}
+	while (src[j] != '\0')
+	{
+		dest[i] = src[j];
+		i++;
+		j++;
+	}
 
 	return (dest);
 }
