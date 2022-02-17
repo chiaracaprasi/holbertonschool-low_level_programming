@@ -46,13 +46,13 @@ char *cap_string(char *str)
 		    str[j] == ',' || str[j] == ';' || str[j] == '.' ||
 		    str[j] == '!' || str[j] == '?' || str[j] == '"' ||
 		    str[j] == '(' || str[j] == ')' || str[j] == '{' ||
-		    str[j] == '}' || (str[j] == '!' && str[j] == ' ' ))
+		    str[j] == '}' || (str[j] == '!' && str[j] == ' '))
 		{
 			/* if space found go to next char */
 			++j;
+
 			if ((str[j] >= 'a' && str[j] <= 'z'))
-			    str[j] = str[j] - 32;
-		
+				str[j] = str[j] - 32;
 			else if (str[j] == ' ' || str[j] == '\n' ||
 				 str[j] == '\t' || str[j] == ',' ||
 				 str[j] == ';' || str[j] == '.' ||
