@@ -40,9 +40,8 @@ char *cap_string(char *str)
 			{
 				str[j] = str[j] - 32;
 			}
-			continue;
 		}
-/* check for spaces */
+/* check for separators */
 		if (str[j] == ' ' || str[j] == '\n' || str[j] == '\t' ||
 		    str[j] == ',' || str[j] == ';' || str[j] == '.' ||
 		    str[j] == '!' || str[j] == '?' || str[j] == '"' ||
@@ -51,22 +50,23 @@ char *cap_string(char *str)
 		{
 			/* if space found go to next char */
 			++j;
-
-			if (str[j] == ' ' || str[j] == '\n' || str[j] == '\t' ||
-		    str[j] == ',' || str[j] == ';' || str[j] == '.' ||
-		    str[j] == '!' || str[j] == '?' || str[j] == '"' ||
-		    str[j] == '(' || str[j] == ')' || str[j] == '{' ||
-		    str[j] == '}')
+			if ((str[j] >= 'a' && str[j] <= 'z'))
+			    str[j] = str[j] - 32;
+		
+			else if (str[j] == ' ' || str[j] == '\n' ||
+				 str[j] == '\t' || str[j] == ',' ||
+				 str[j] == ';' || str[j] == '.' ||
+				 str[j] == '!' || str[j] == '?' ||
+				 str[j] == '"' || str[j] == '(' || str[j] == ')'
+				 || str[j] == '{' || str[j] == '}')
 			{
 				++j;
-/* check if next char is lower case */
-			if ((str[j] >= 'a' && str[j] <= 'z'))
-			{
-				str[j] = str[j] - 32;
-			}
-			continue;
+				if ((str[j] >= 'a' && str[j] <= 'z'))
+				{
+					str[j] = str[j] - 32;
+				}
 			}
 		}
 	}
-	return (str);
+		return (str);
 }
