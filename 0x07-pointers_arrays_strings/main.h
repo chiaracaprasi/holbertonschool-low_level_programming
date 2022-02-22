@@ -7,3 +7,5 @@ char *_strpbrk(char *s, char *accept);
 char *_strstr(char *haystack, char *needle);
 void print_chessboard(char (*a)[8]);
 void print_diagsums(int *a, int size);
+int match(char *first_matching_char, char *needle);
+void set_string(char **s, char *to);
