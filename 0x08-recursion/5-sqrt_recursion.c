@@ -4,7 +4,7 @@
 /**
  * natural_square_root- returns natural square root of a number
  * @y: given number
- * @n: given number
+ * @x: given number
  * Return: returns natural square root of a number given
  */
 int natural_square_root(int y, int x)
