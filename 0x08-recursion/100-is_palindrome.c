@@ -2,14 +2,15 @@
 #include <stdio.h>
 
 /**
- * prime_test - tells if input integer is a prime number by returning 1
- * @n: the given number to check
- * @i: incrementing number to test against
+ * palindrome_found - recursive check for palindrome
+ * @s: string given to check
+ * @i: incrementing number
+ * @len: length of string
  * Return: 1 if the input integer is a prime number, otherwise return 0.
  */
 int palindrome_found(char *s, int i, int len)
 {
-	if (*(s + i) != *( s + len - 1))
+	if (*(s + i) != *(s + len - 1))
 	{
 		return (0);
 	}
@@ -52,5 +53,5 @@ int is_palindrome(char *s)
 	if (*s == 0)
 		return (1);
 	else
-		return(palindrome_found(s, 0, _strlen_recursion(s)));
+		return (palindrome_found(s, 0, _strlen_recursion(s)));
 }
