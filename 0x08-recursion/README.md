@@ -17,4 +17,4 @@ Task 8 - Write a function that compares two strings and returns 1 if the strings
 **Requirements**
 Not allowed to use any kind of loops or standard library.
 
-![https://tenor.com/view/leonardo-di-caprio-inception-paranoid-ending-gif-11736355]
+![Meme of inception](https://tenor.com/view/leonardo-di-caprio-inception-paranoid-ending-gif-11736355)
