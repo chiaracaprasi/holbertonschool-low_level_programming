@@ -1,4 +1,4 @@
-#Project 0x08. C - Recursion#
+# Project 0x08. C - Recursion
 
 **Mandatory Tasks**
 
