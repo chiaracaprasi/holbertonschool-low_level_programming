@@ -27,6 +27,7 @@ int _isdigit(char *c)
 int main(int argc, char *argv[])
 {
 	int i, sum;
+	i = 1;
 
 	if (argc == 1)
 	{
@@ -34,7 +35,7 @@ int main(int argc, char *argv[])
 		return (0);
 	}
 
-	while ( i < argc)
+	while (i < argc)
 	{
 		if (_isdigit(argv[i]) == 1)
 		{
