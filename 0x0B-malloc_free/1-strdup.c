@@ -48,14 +48,14 @@ char *_strcpy(char *dest, char *src)
  */
 char *_strdup(char *str)
 {
-	char result;
+	char *result;
 
 	if (str == NULL)
 	{
 		return (NULL);
 	}
 
-	*result = malloc((_strlen(str) + 1) * sizeof(char));
+	result = malloc((_strlen(str) + 1) * sizeof(char));
 
 	if (result == NULL)
 	{
