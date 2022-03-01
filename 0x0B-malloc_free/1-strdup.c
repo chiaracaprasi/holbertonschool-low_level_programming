@@ -50,6 +50,11 @@ char *_strdup(char *str)
 {
 	char *result = malloc((_strlen(str) + 1) * sizeof(char));
 
+	if (str == NULL)
+	{
+		return (NULL);
+
+	}
 	if (result == NULL)
 	{
 		return (NULL);
