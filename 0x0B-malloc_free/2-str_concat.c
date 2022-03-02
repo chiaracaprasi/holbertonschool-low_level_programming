@@ -49,19 +49,24 @@ char *_strcpy(char *dest, char *src)
 
 char *str_concat(char *s1, char *s2)
 {
-
 	int len1, len2;
 	char *result;
 
+	if (s1 == NULL)
+		s1 = "";
+
+	if (s2 == NULL)
+		s2 = "";
 
 	len1 = _strlen(s1);
 	len2 = _strlen(s2);
-
 	result = malloc((len1 + len2 + 1) * sizeof(char));
 
 	if (result == NULL)
-	{
 		return (NULL);
-	}
+
+	_strcpy(result, s1);
+	_strcpy(result + len1, s2);
+
 	return (result);
 }
