@@ -54,7 +54,6 @@ char *_strcat(char *dest, char *src)
 
 char *argstostr(int ac, char **av)
 {
-{
 	int i, space;
 	char *result;
 
