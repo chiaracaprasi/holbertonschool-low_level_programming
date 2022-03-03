@@ -7,9 +7,9 @@
  * @s: pointer to string given as parameter
  * Return: Always 0.
  */
-int _strlen(char *s)
+unsigned int _strlen(char *s)
 {
-	int n;
+	unsigned int n;
 
 	for (n = 0; *s != '\0'; s++)
 		n++;
@@ -28,7 +28,7 @@ int _strlen(char *s)
 
 char *_strcpy(char *dest, char *src)
 {
-	int count = 0;
+	unsigned int count = 0;
 
 	while (src[count] != '\0')
 	{
@@ -47,16 +47,16 @@ char *_strcpy(char *dest, char *src)
  * @n: number given as parameter
  * Return: Always 0.
  */
-char *_strncat(char *dest, char *src, int n)
+char *_strncat(char *dest, char *src, unsigned int n)
 {
-	int dest_len = _strlen(dest);
-	int i;
+	unsigned int dest_len = _strlen(dest);
+	unsigned int i;
 
 	for (i = 0 ; i < n && src[i] != '\0' ; i++)
 	{
 		dest[dest_len + i] = src[i];
 	}
-	dest[dest_len + i] = '\0';
+/*	dest[dest_len + i] = '\0'; */
 
 	return (dest);
 }
@@ -93,6 +93,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	_strcpy(result, s1);
 	_strncat(result, s2, n);
+	result[len1 + n] = '\0';
 
 	return (result);
 }
