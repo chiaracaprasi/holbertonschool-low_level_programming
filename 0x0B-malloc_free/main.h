@@ -11,5 +11,6 @@ char *argstostr(int ac, char **av);
 char **strtow(char *str);
 char *_strcpy(char *dest, char *src);
 int _strlen(char *s);
+char *_strcat(char *dest, char *src);
 
 #endif /* MAIN_H */
