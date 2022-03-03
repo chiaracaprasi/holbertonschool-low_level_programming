@@ -9,58 +9,17 @@
  */
 unsigned int _strlen(char *s)
 {
-	unsigned int n;
+	unsigned int n = 0;
 
-	for (n = 0; *s != '\0'; s++)
+	while (*s != '\0')
+	{
 		n++;
+		s++;
+	}
 
 	return (n);
 
 }
-
-
-/**
- * _strcpy - print a string followed by new line
- * @dest: pointer to array given as parameter
- * @src: number of elements of the array to be printed
- * Return: char* the pointer to dest.
- */
-
-char *_strcpy(char *dest, char *src)
-{
-	unsigned int count = 0;
-
-	while (src[count] != '\0')
-	{
-		dest[count] = src[count];
-		count++;
-
-		dest[count] = '\0';
-	}
-	return (dest);
-}
-
-/**
- * _strncat - concatenates two strings
- * @dest: parameter char given
- * @src: parameter char given
- * @n: number given as parameter
- * Return: Always 0.
- */
-char *_strncat(char *dest, char *src, unsigned int n)
-{
-	unsigned int dest_len = _strlen(dest);
-	unsigned int i;
-
-	for (i = 0 ; i < n && src[i] != '\0' ; i++)
-	{
-		dest[dest_len + i] = src[i];
-	}
-/*	dest[dest_len + i] = '\0'; */
-
-	return (dest);
-}
-
 
 /**
  * string_nconcat -  concatenates two strings
@@ -71,7 +30,7 @@ char *_strncat(char *dest, char *src, unsigned int n)
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int len1, len2;
+	unsigned int len1, len2, i, j;
 	char *result;
 
 	if (s1 == NULL)
@@ -91,9 +50,21 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (result == NULL)
 		return (NULL);
 
-	_strcpy(result, s1);
-	_strncat(result, s2, n);
-	result[len1 + n] = '\0';
+	i = 0;
+	while (s1[i] != '\0')
+	{
+		result[i] = s1[i];
+		i++;
+	}
+	j = 0;
+	while (n > 0)
+	{
+		result[i] = s2[j];
+		i++;
+		j++;
+		n--;
+	}
+	result[i] = '\0';
 
 	return (result);
 }
