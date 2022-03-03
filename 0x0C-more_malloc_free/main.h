@@ -8,6 +8,6 @@ int *array_range(int min, int max);
 int _putchar(char c);
 char *_strcpy(char *dest, char *src);
 int _strlen(char *s);
-
+char *_strncat(char *dest, char *src, int n);
 
 #endif /* MAIN_H */
