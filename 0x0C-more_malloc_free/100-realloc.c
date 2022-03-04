@@ -18,7 +18,7 @@ void *_memcpy(void *dest, void *src, unsigned int n)
 
 	while (count < n)
 	{
-		*(fill_dest + count) = *(fill_src + count);
+		fill_dest[counter] = fill_src[counter];
 		count++;
 	}
 
