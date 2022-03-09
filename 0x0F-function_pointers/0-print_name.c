@@ -4,7 +4,7 @@
 /**
  * print_name - prints a name
  * @name: name of the person
- *
+ * @f: pointer to function 
  * Return: Nothing.
  */
 
