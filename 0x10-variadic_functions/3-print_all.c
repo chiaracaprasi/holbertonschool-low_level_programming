@@ -11,29 +11,25 @@ void print_all(const char * const format, ...)
 {
 	va_list ap;
 	int i = 0;
-	int num, c;
-	double f;
 	char *str, *sep;
+
 	sep = "";
 	va_start(ap, format);
 
-	if(format)
+	if (format)
 	{
 		while (format[i])
 		{
 			switch (format[i])
 			{
 			case 'c':
-				c = va_arg(ap, int);
-				printf("%s%c", sep, c);
+				printf("%s%c", sep, va_arg(ap, int));
 				break;
 			case 'i':
-				num = va_arg(ap, int);
-				printf("%s%d", sep, num);
+				printf("%s%d", sep, va_arg(ap, int));
 				break;
 			case 'f':
-				f = va_arg(ap, double);
-				printf("%s%f", sep, f);
+				printf("%s%f", sep, va_arg(ap, double));
 				break;
 			case 's':
 				str = va_arg(ap, char *);
