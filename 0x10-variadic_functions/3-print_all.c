@@ -15,10 +15,10 @@ void print_all(const char * const format, ...)
 	double f;
 	char *str, *sep;
 	sep = "";
+	va_start(ap, format);
 
-	if(format != NULL)
+	if(format)
 	{
-		va_start(ap, format);
 		while (format[i])
 		{
 			switch (format[i])
@@ -48,8 +48,8 @@ void print_all(const char * const format, ...)
 			sep = ", ";
 			i++;
 		}
-		va_end(ap);
 		putchar('\n');
+		va_end(ap);
 	}
 
 }
