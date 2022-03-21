@@ -12,12 +12,15 @@
 int pop_listint(listint_t **head)
 {
 	listint_t *tmp = *head;
+	int n;
 
 	if (*head == NULL || head == NULL)
 		return (0);
 
 	*head = tmp->next;
+	// int n is to store the data value of new head node
+	n = tmp->n;
 	free(tmp);
 
-	return ((*head)->n);
+	return (n);
 }
