@@ -18,7 +18,7 @@ int pop_listint(listint_t **head)
 		return (0);
 
 	*head = tmp->next;
-	// int n is to store the data value of new head node
+	/* int n is to store the data value of new head node */
 	n = tmp->n;
 	free(tmp);
 
